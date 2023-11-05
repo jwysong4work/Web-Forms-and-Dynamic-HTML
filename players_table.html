@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players Table</title>
+    <summary>
+        This is a table displaying the player roster of the 2023 Seattle Seahawks.
+    </summary>
+</head>
+<body>
+    <h1>Players Table</h1>
+    <table border="1">
+        <thead> <!-- Use <thead> instead of <thread> -->
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Jersey Number</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Player in Players %}
+            <tr>
+                <td>{{ Player['FirstName'] }}</td>
+                <td>{{ Player['LastName'] }}</td>
+                <td>{{ Player['JerseyNo'] }}</td>
+                <td>{{ Player['Position'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
